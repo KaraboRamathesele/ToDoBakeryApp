@@ -12,6 +12,7 @@ form.addEventListener('submit', (e) => {
     formValidation();
 });
 
+// Validate the inputs
 let formValidation = () => {
     if (textInput.value === '') {
         console.log('blank form');
@@ -29,6 +30,7 @@ let formValidation = () => {
     }
 };
 
+// Empty array to collect the data input and store
 let data = [];
 
 // Use this function to fetch data in input and store in empty object. 
@@ -56,14 +58,13 @@ let createTasks = () => {
     
         <p>${x.description}</p>
         <span class="options">
+          <i onClick = 'completeTask(this)' class="fa-solid fa-check"></i>
           <i onClick = 'editTask(this)' data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
           <i onClick = 'deleteTask(this);createTasks()' class="fa-solid fa-trash"></i>
         </span>
       </div>
       `);
     });
-
-    
 
   resetForm();
 
@@ -75,13 +76,20 @@ let resetForm = ()=> {
     textarea.value = '';
 };
 
+let completeTask = (e) => {
+    // let checkButton = document.createElement('button');
+    // checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+    // checkButton.classList.add('checkTask');
+    // task.appendChild(checkButton);
+}
+
 let deleteTask = (e) => {
     e.parentElement.parentElement.remove();
     data.splice(e.parentElement.parentElement.id, 1);
     localStorage.setItem('data', JSON.stringify(data));
 }
 
-// 
+// Update contentEditable?
 let editTask = (e)=> {
     let selectedTask =  e.parentElement.parentElement; // div with tasks is the main parent 
 
@@ -97,3 +105,4 @@ let editTask = (e)=> {
     console.log(data);
     createTasks();
 })()
+
