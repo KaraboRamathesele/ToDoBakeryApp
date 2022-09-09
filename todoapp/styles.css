@@ -4,7 +4,7 @@
 }
 
 .body {
-        background: url(../todoapp/images/flour.jpg);
+        background: url(../todoapp/images/flour.jpg) ;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
