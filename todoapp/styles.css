@@ -3,8 +3,13 @@
     box-sizing: border-box;
 }
 
+:root {
+	--business: #3a82ee;
+	--danger: #ff5b57;
+}
+
 .body {
-        background: url(../todoapp/images/flour.jpg) ;
+        background: url(../todoapp/images/flour.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -12,8 +17,7 @@
 }
 
 .app {
-    border: 5px solid purple;
-    border-radius: 10px;
+    border-radius: 10px; 
     padding: 15px;
     overflow: scroll;
 }
@@ -26,12 +30,18 @@
 /* Adding Task */
 #addNew {
     display: flex;
-    background-color: rgba(156, 40, 145, 0.26);
+    background-color: rgba(58, 130, 238, 0.2) ;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#addNew::after{
+    opacity: 0.70;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease-in-out;
 }
 
 .fa-plus {
@@ -46,8 +56,8 @@
 }
 
 #tasks div {
-    background-color: rgba(156, 40, 145, 0.25); 
-    border: 3px solid purple;
+    background-color: rgba(58, 130, 238, 0.24); 
+    border: 3px solid var(--business);
     padding: 5px;
     border-radius: 10px;
     display: grid;
@@ -64,7 +74,15 @@
      cursor:pointer;
 }
 
-/* Pop up message */
+/* Pop up message for invalid input */
 #msg {
-    color: red;
+    color: var(--danger);
 }
+
+
+
+
+
+
+
+

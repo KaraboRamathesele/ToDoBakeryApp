@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
 let formValidation = () => {
     if (textInput.value === '') {
         console.log('blank form');
-        msg.innerHTML = 'Task cannot be blank'; 
+        msg.innerHTML = `Blank! Don't blend the rules!`; 
     } else {
         console.log('valid form');
         msg.innerHTML = '';
