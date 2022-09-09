@@ -1,2 +1,3 @@
 # ToDoBakeryApp
-create orders to do on this bakery to do app
+Single page application 
+can create to-do list for bakery orders or menu list.
