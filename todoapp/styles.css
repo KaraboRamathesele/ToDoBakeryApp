@@ -1,0 +1,64 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background: rgba(156, 40, 145, 0.2);
+}
+
+.app {
+    border: 5px solid purple;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: scroll;
+}
+
+.app::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+/* Adding Task */
+#addNew {
+    display: flex;
+    background-color: rgba(156, 40, 145, 0.26);
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fa-plus {
+    background: rgba(156, 40, 145, 0.57);
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#tasks {
+    display: grid;
+    gap: 14px;
+}
+
+#tasks div {
+    background-color: rgba(156, 40, 145, 0.25); 
+    border: 3px solid purple;
+    padding: 5px;
+    border-radius: 10px;
+    display: grid;
+    gap: 5px;
+}
+
+.options {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.options i {
+     cursor:pointer;
+}
+
+#msg {
+    color: red;
+}
