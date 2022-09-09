@@ -4,7 +4,11 @@
 }
 
 .body {
-    background: rgba(156, 40, 145, 0.2);
+        background: url(../todoapp/images/flour.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
 }
 
 .app {
@@ -14,6 +18,7 @@
     overflow: scroll;
 }
 
+/* remove the scroll icons */
 .app::-webkit-scrollbar {
     width: 0 !important;
 }
@@ -30,7 +35,7 @@
 }
 
 .fa-plus {
-    background: rgba(156, 40, 145, 0.57);
+    /* background: rgba(156, 40, 145, 0.57); */
     padding: 3px;
     border-radius: 3px;
 }
@@ -59,6 +64,7 @@
      cursor:pointer;
 }
 
+/* Pop up message */
 #msg {
     color: red;
 }
