@@ -9,7 +9,7 @@
 }
 
 body {
-        background: url(/todoapp/images/flour.jpg);
+        background: url(/todoapp/images/flour.jpg); 
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -31,7 +31,7 @@ body {
 /* Adding Task */
 #addNew {
     display: flex;
-    background-color: rgba(58, 130, 238, 0.2) ;
+    background-color: rgba(58, 130, 238, 0.1) ;
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
@@ -53,7 +53,7 @@ body {
 }
 
 .fa-plus {
-    /* background: rgba(156, 40, 145, 0.57); */
+    background: var(--primary);
     padding: 3px;
     border-radius: 3px;
 }
@@ -64,7 +64,7 @@ body {
 }
 
 #tasks div {
-    background-color: rgba(58, 130, 238, 0.59); 
+    background-color: rgba(58, 130, 238, 0.7); 
     border: 3px solid var(--primary);
     padding: 5px;
     border-radius: 10px;
