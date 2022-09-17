@@ -33,7 +33,7 @@ let formValidation = () => {
 // Empty array to collect the data input and store
 let data = [];
 
-// Use this function to fetch data in input and store in empty object. 
+// Use this function to fetch data in input and store in empty data object. 
 let acceptData = () => {
     data.push({
     text: textInput.value,
@@ -58,7 +58,7 @@ let createTasks = () => {
     
         <p>${x.description}</p>
         <span class="options">
-          <i onClick = 'completeTask(this)' class="fa-solid fa-check"></i>
+          <i onClick = 'completeTask(this)' class="fa-solid fa-check complete-btn"></i>
           <i onClick = 'editTask(this)' data-bs-toggle="modal" data-bs-target="#form" class="fa-solid fa-pen-to-square"></i>
           <i onClick = 'deleteTask(this);createTasks()' class="fa-solid fa-trash"></i>
         </span>
@@ -67,7 +67,6 @@ let createTasks = () => {
     });
 
   resetForm();
-
 };
 
 let resetForm = ()=> {
@@ -76,11 +75,12 @@ let resetForm = ()=> {
     textarea.value = '';
 };
 
+// Complete task function not working
 let completeTask = (e) => {
-    // let checkButton = document.createElement('button');
-    // checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-    // checkButton.classList.add('checkTask');
-    // task.appendChild(checkButton);
+    if (e.target.classList[0] === 'complete-btn') {
+        const todo = e.target.parentElement;
+        todo.classList.toggle('checked');
+    }
 }
 
 let deleteTask = (e) => {
@@ -98,6 +98,7 @@ let editTask = (e)=> {
     textarea.value = selectedTask.children[2].innerHTML
 
     deleteTask(e);
+    completeTask();
 }
 
 (() => {

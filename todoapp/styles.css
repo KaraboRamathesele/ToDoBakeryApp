@@ -30,15 +30,18 @@ body {
 
 /* Adding Task */
 #addNew {
-    display: flex;
+    align-content: center;
     background-color: rgba(58, 130, 238, 0.1) ;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    margin-top: 15px;
-    border: 3px solid var(--primary);
     border-radius: 5px;
+    border: 3px solid var(--primary);
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 171px;
+    margin-top: 15px;
+    padding: 5px 10px;
+    width: 50vw;
+   
 }
 
 #addNew::after{
@@ -87,8 +90,9 @@ body {
     color: var(--danger);
 }
 
-
-
+.checked {
+    text-decoration: line-through;
+}
 
 
 
