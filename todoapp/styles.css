@@ -37,7 +37,7 @@ body {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-left: 171px;
+    margin-left: 350px;
     margin-top: 15px;
     padding: 5px 10px;
     width: 50vw;
@@ -94,7 +94,11 @@ body {
     text-decoration: line-through;
 }
 
-
+@media screen and (max-width: 800px){
+    #addNew {
+        margin-left: 171px;
+    }
+}
 
 
 
